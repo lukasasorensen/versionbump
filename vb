@@ -16,11 +16,11 @@ IFS='.'; splitVersion=($version); unset IFS;
 while getopts ":mMp" opt; do case ${opt} in
   m )
     bumpThis=${splitVersion[1]}
-    bumped="\"version\": \"${splitVersion[0]}.$((bumpThis + 1)).${splitVersion[2]}\","     
+    bumped="\"version\": \"${splitVersion[0]}.$((bumpThis + 1)).0\","
     ;;
   M )
     bumpThis=${splitVersion[0]}
-    bumped="\"version\": \"$((bumpThis + 1)).${splitVersion[1]}.${splitVersion[2]}\","  
+    bumped="\"version\": \"$((bumpThis + 1)).0.0\","
     ;;
   p )
     bumpThis=${splitVersion[2]}
